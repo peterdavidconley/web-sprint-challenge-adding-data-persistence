@@ -17,7 +17,9 @@ function create (task) {
 
     return db('tasks')
     .insert(task)
-    .then(([id]) => get(id));
+    .then(([task_id]) => {
+        return db('tasks').where('task_id', task_id).first()
+      })
     
 }
 

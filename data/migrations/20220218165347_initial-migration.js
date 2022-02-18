@@ -6,7 +6,7 @@ exports.up = async function(knex) {
       tbl.increments('project_id')
       tbl.string('project_name', 150).notNullable()
       tbl.string('project_description', 500)
-      tbl.boolean('project_completed').defaultTo(false)
+      tbl.boolean('project_completed').defaultTo(0)
   })
   .createTable('resources', tbl => {
     tbl.increments('resource_id')

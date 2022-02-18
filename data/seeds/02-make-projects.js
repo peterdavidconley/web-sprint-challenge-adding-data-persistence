@@ -29,8 +29,6 @@ const tasks = [
 
 // ]
 
-
-
 exports.seed = async function (knex) {
 
     await knex('projects').insert(projects),

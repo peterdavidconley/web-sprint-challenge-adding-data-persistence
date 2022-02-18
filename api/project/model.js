@@ -12,7 +12,9 @@ async function find() {
 function create(project) {
     return db('projects')
     .insert(project)
-    .then(([id]) => get(id));
+    .then(([project_id]) => {
+        return db('projects').where('project_id', project_id).first()
+      })
 }
 
 module.exports = {
