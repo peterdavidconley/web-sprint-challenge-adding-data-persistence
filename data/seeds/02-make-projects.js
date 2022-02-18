@@ -11,14 +11,6 @@ const resources = [
     {resource_id:2, resource_name:"Dave", resource_description: "Dave is a great friend who knows a lot about finances"}
 ]
 
-const project_resources = [
-
-    {proj_resource_id: 1, project_id:1, resource_id:1},
-    {proj_resource_id: 2, project_id:2, resource_id:1},
-    {proj_resource_id: 3, project_id:3, resource_id:2},
-
-]
-
 const tasks = [
 
     // Clean House Project
@@ -32,11 +24,21 @@ const tasks = [
     {task_id:6, task_description:"calculate budget", task_notes:null, task_completed:false, project_id:3}
 ]
 
+// const project_resources = [
+
+//     {proj_resources_id: 1, project_id:1, resource_id:1},
+//     {proj_resources_id: 2, project_id:2, resource_id:1},
+//     {proj_resources_id: 3, project_id:3, resource_id:2},
+
+// ]
+
+
+
 exports.seed = async function (knex) {
 
     await knex('projects').insert(projects),
     await knex('resources').insert(resources),
-    await knex('project_resources').insert(project_resources),
-    await knex('tasks').insert(tasks),
+    await knex('tasks').insert(tasks)
+    //await knex('project_resources').insert(project_resources),
 
-}
+};

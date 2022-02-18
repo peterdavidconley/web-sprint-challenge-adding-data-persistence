@@ -2,10 +2,10 @@ const db = require('../../data/dbConfig');
 
 //`[GET] /api/resources` - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-function find () {
+async function find () {
 
-    return Promise.resolve('/api/resources GET endpoint working')
-    
+    const resourcesRows = await db('resources as r')
+    return resourcesRows    
 }
 
 // `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
