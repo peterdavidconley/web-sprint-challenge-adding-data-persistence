@@ -32,7 +32,7 @@ router.use('*', (req, res) => {
 
 router.use((err, req, res, next) => { // eslint-disable-line
   res.status(500).json({
-    customMessage: 'Error in project/router.js',
+    customMessage: 'Error in resource/router.js',
     message: err.message,
     stack: err.stack,
   })
