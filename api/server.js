@@ -1,20 +1,18 @@
 const express = require('express');
-const server = express();
 
+// Importing routers
 const projectRouter = require('./project/router');
 const resourceRouter = require('./resource/router');
 const taskRouter = require('./task/router');
 
+const server = express();
+
 server.use(express.json());
 
+// Routers
 server.use('/api/projects', projectRouter)
 server.use('/api/resources', resourceRouter)
 server.use('/api/tasks', taskRouter)
-
-
-server.use('*', (req, res) => {
-    res.json({ api: 'API is up and running.'})    
-})
 
 module.exports = server;
 
