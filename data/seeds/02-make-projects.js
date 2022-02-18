@@ -32,11 +32,11 @@ const tasks = [
     {task_id:6, task_description:"calculate budget", task_notes:null, task_completed:false, project_id:3}
 ]
 
-exports.seed = function (knex) {
+exports.seed = async function (knex) {
 
-    projects,
-    resources,
-    tasks,
-    project_resources,
+    await knex('projects').insert(projects),
+    await knex('resources').insert(resources),
+    await knex('project_resources').insert(project_resources),
+    await knex('tasks').insert(tasks),
 
 }
