@@ -13,13 +13,10 @@ const resources = [
 
 const tasks = [
 
-    // Clean House Project
     {task_id:1, task_description:"clean upstairs", task_notes:null, task_completed:false, project_id:1},
     {task_id:2, task_description:"clean downstairs", task_notes:null, task_completed:false, project_id:1},
-    // Build Shed Project
     {task_id:3, task_description:"layout pieces of shed", task_notes:null, task_completed:false, project_id:2},
     {task_id:4, task_description:"fit pieces together", task_notes:null, task_completed:false, project_id:2},
-    // Budget Project
     {task_id:5, task_description:"spreadsheet all spending", task_notes:null, task_completed:false, project_id:3},
     {task_id:6, task_description:"calculate budget", task_notes:null, task_completed:false, project_id:3}
 ]

@@ -15,15 +15,15 @@ router.get('/', (req, res, next) => {
 
 // `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-// router.post('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
     
-//     Resources.create(req.body)
-//     .then(resource => {
-//       res.status(201).json(resource)
-//     })
-//     .catch(next)
+    Resources.create(req.body)
+    .then(resource => {
+      res.status(201).json(resource)
+    })
+    .catch(next)
 
-// })
+})
 
 router.use((err, req, res, next) => { // eslint-disable-line
   res.status(500).json({

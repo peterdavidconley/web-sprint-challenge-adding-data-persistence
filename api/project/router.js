@@ -16,15 +16,15 @@ router.get('/', (req, res, next) => {
 
 //`[POST] /api/projects` - Even though `project_completed` is stored as an integer, the API uses booleans when interacting with the client - Example of response body: `{"project_id":1,"project_name":"bar","project_description":null,"project_completed":false}`
 
-// router.post('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
 
-//   // Projects.create(req.body)
-//   //   .then(project => {
-//   //     res.status(201).json(project)
-//   //   })
-//   //   .catch(next)
+  Projects.create(req.body)
+    .then(project => {
+      res.status(201).json(project)
+    })
+    .catch(next)
     
-// })
+})
 
 
 router.use((err, req, res, next) => { // eslint-disable-line

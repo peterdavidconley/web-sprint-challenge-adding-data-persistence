@@ -10,8 +10,11 @@ async function find () {
 
 // `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
-function create () {
+function create (resource) {
     
+    return db('resources')
+    .insert(resource)
+    .then(([id]) => get(id));
 }
 
 module.exports = {
