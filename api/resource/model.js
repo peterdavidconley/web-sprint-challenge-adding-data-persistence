@@ -1,16 +1,20 @@
 const db = require('../../data/dbConfig');
 
-function findResources () {
+//`[GET] /api/resources` - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
+
+function find () {
 
 }
 
-function createResources () {
+// `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
+
+function create () {
     
 }
 
 module.exports = {
 
-    findResources,
-    createResources,
+    find,
+    create,
     
 }
