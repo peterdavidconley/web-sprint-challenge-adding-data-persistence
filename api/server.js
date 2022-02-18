@@ -14,5 +14,10 @@ server.use('/api/projects', projectRouter)
 server.use('/api/resources', resourceRouter)
 server.use('/api/tasks', taskRouter)
 
+// Catch-all endpoint
+server.use('*', (req, res) => {
+    res.json({ api: 'api catch-all endpoint'})
+  })
+
 module.exports = server;
 

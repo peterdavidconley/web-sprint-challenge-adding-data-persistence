@@ -4,7 +4,7 @@ const db = require('../../data/dbConfig');
 
 function find () {
 
-    //return db('resources')
+    return Promise.resolve('/api/resources GET endpoint working')
     
 }
 

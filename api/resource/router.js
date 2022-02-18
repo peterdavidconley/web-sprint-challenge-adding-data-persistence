@@ -3,15 +3,15 @@ const Resources = require('./model');
 
 //`[GET] /api/resources` - Example of response body: `[{"resource_id":1,"resource_name":"foo","resource_description":null}]`
 
-// router.get('/', (req, res, next) => {
+router.get('/', (req, res, next) => {
 
-//     Resources.find()
-//     .then(resource => {
-//       res.json(resource)
-//     })
-//     .catch(next)
+    Resources.find()
+    .then(resource => {
+      res.json(resource)
+    })
+    .catch(next)
 
-// })
+})
 
 // `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`
 
@@ -24,11 +24,6 @@ const Resources = require('./model');
 //     .catch(next)
 
 // })
-
-router.use('*', (req, res) => {
-  res.json({ api: 'up for resources router'})
-})
-
 
 router.use((err, req, res, next) => { // eslint-disable-line
   res.status(500).json({
