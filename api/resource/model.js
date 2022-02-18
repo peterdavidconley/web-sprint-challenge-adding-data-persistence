@@ -4,6 +4,8 @@ const db = require('../../data/dbConfig');
 
 function find () {
 
+    //return db('resources')
+    
 }
 
 // `[POST] /api/resources` - Example of response body: `{"resource_id":1,"resource_name":"foo","resource_description":null}`

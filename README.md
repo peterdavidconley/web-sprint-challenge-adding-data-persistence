@@ -21,9 +21,9 @@ In this project you will be given a set of requirements and must design a databa
 
 ### Files to Complete
 
-1. `package.json`
-2. `index.js`
-3. `api/server.js`
+[X] `package.json`
+[X]  `index.js`
+[X]  `api/server.js`
 4. `model.js` inside `api/project`, `api/resource` and `api/task`
 5. `router.js` inside `api/project`, `api/resource` and `api/task`
 6. migration file(s)
@@ -112,7 +112,7 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between Relational Databases and SQL.
 
-
+A relational database is a collection of data entries with pre-defined relationships between them that are organized in rows and columns. SQL is the standard language that is used to communicate with these relational databases.
 
 2. Why do tables need a Primary Key?
 
